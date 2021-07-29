@@ -27,9 +27,10 @@ if ( eta <= 18){
 
 
 if (bigliettoMinorenne){
-    alert(" Ecco il prezzo del tuo biglietto con lo sconto applicato!" + bigliettoMinorenne.toFixed(2) + '€');
+    document.getElementById("prezzo_biglietto").innerHTML += ("Prezzo con riduzione Under 18:"+ " " + bigliettoMinorenne.toFixed(2) + '€');
+   
 } else if(bigliettoSenior){
-    alert(" Ecco il prezzo del tuo biglietto con lo sconto applicato!" + bigliettoSenior.toFixed(2) +'€')
+    document.getElementById("prezzo_biglietto").innerHTML += ("Prezzo con riduzione Over 65:"+ " " + bigliettoSenior.toFixed(2) + '€');
 }else {
-    alert("Ecco il prezzo del tuo biglietto:" + prezzoBiglietto.toFixed(2) + '€')
+    document.getElementById("prezzo_biglietto").innerHTML += ("Prezzo a tariffa intera:"+ " " + prezzoBiglietto.toFixed(2) + '€');
 }
